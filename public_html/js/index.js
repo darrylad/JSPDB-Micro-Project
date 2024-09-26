@@ -8,7 +8,7 @@ var jpdbIML="/api/iml";
 var jpdbIRL="/api/irl";
 var empDBName="SCHOOL-DB";
 var empRelationName="STUDENT-TABLE";
-var connToken="90931977|-31949224790054679|90962542";
+
 
 $("#empid").focus();
 
