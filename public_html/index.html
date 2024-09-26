@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Student Details</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Student Details</h2>
+
+            <form id="empform" method="get">
+                <div class="form-group">
+                    <label>Roll number:</label>
+                    <input type="number" class="form-control" id="empid" onchange="getEmp()">
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" class="form-control" id="empname">
+                </div>
+
+                <div class="form-group">
+                    <label>Class:</label>
+                    <input type="number" class="form-control" id="empsal">
+                </div>
+
+                <div class="form-group">
+                    <label>Birth Date:</label>
+                    <input type="text" class="form-control" id="hra">
+                </div>
+
+                <div class="form-group">
+                    <label>Address:</label>
+                    <input type="text" class="form-control" id="da">
+                </div>
+
+                <div class="form-group">
+                    <label>Enrollment number:</label>
+                    <input type="number" class="form-control" id="deduct">
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-primary" id="save" onclick="saveData();" disabled>Save</button>
+                    <button type="button" class="btn btn-primary" id="change" onclick="changeData();" disabled>Change</button>
+                    <button type="button" class="btn btn-primary" id="reset" onclick="resetForm();" disabled>Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascirpt" src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+
+        <!--        <script>
+                    function validateAndGetFormData() {
+                        var empIdVar = $("#empId").val();
+                        if (empIdVar === "") {
+                            alert("Employee ID Required Value");
+                            $("#empId").focus();
+                            return "";
+                        }
+                        var empNameVar = $("#empName").val();
+                        if (empNameVar === "") {
+                            alert("Employee Name is Required Value");
+                            $("#empName").focus();
+                            return "";
+                        }
+                        var empEmailVar = $("#empEmail").val();
+                        if (empEmailVar === "") {
+                            alert("Employee Email is Required Value");
+                            $("#empEmail").focus();
+                            return "";
+                        }
+                        var jsonStrObj = {
+                            empId: empIdVar,
+                            empName: empNameVar,
+                            empEmail: empEmailVar,
+                        };
+                        return JSON.stringify(jsonStrObj);
+                    }
+        // This method is used to create PUT Json request.
+                    function createPUTRequest(connToken, jsonObj, dbName, relName) {
+                        var putRequest = "{\n"
+                                + "\"token\" : \""
+                                + connToken
+                                + "\","
+                                + "\"dbName\": \""
+                                + dbName
+                                + "\",\n" + "\"cmd\" : \"PUT\",\n"
+                                + "\"rel\" : \""
+                                + relName + "\","
+                                + "\"jsonStr\": \n"
+                                + jsonObj
+                                + "\n"
+                                + "}";
+                        return putRequest;
+                    }
+                    function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+                        var url = dbBaseUrl + apiEndPointUrl;
+                        var jsonObj;
+                        $.post(url, reqString, function (result) {
+                            jsonObj = JSON.parse(result);
+                        }).fail(function (result) {
+                            var dataJsonObj = result.responseText;
+                            jsonObj = JSON.parse(dataJsonObj);
+                        });
+                        return jsonObj;
+                    }
+                    function resetForm() {
+                        $("#empId").val("")
+                        $("#empName").val("");
+                        $("#empEmail").val("");
+                        $("#empId").focus();
+                    }
+                    function saveEmployee() {
+                        var jsonStr = validateAndGetFormData();
+                        if (jsonStr === "") {
+                            return;
+                        }
+                        var putReqStr = createPUTRequest("90931977|-31949224790054679|90962542",
+                                jsonStr, "SAMPLE", "EMP-REL");
+                        alert(putReqStr);
+                        jQuery.ajaxSetup({async: false});
+                        var resultObj = executeCommand(putReqStr,
+                                "http://api.login2explore.com:5577", "/api/iml");
+                        alert(JSON.stringify(resultObj));
+                        jQuery.ajaxSetup({async: true});
+                        resetForm();
+                    }
+                </script>-->
+    </body>
+</html>
