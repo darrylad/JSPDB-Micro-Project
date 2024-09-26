@@ -8,6 +8,7 @@ var jpdbIML="/api/iml";
 var jpdbIRL="/api/irl";
 var empDBName="SCHOOL-DB";
 var empRelationName="STUDENT-TABLE";
+// token name is hidden
 
 
 $("#empid").focus();
